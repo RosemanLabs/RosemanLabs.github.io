@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Team-Boxed.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -37,14 +38,46 @@
 </head>
 
 <body style="font-family: 'Fira Sans Extra Condensed', sans-serif;">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container"><a class="navbar-brand" href="index.html">Roseman Labs</a><a href="mailto:info@rosemanlabs.com"><i class="fa fa-envelope-o"></i></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="privacy2_0.html">Privacy 2.0</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="engine.html">Privacy Engine</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="team.html">Team</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
     <section class="slide one" style="background-color: #ffffff;">
         <h1 style="color: rgb(181,43,117);">Use sensitive data <br>with superior privacy?<br></h1>
     </section>
     <section class="slide one" style="background-color: #eeefef;"><img class="img-fluid" src="assets/img/roseman_labs_white_bg_fonts.svg" style="width: 566px;padding-left: 20px;padding-right: 20px;"></section>
     <section id="our_product" class="slide one">
-        <h1 style="padding-left: 20px;padding-right: 20px;">Consider our Secure Computation<a href="https://en.wikipedia.org/wiki/Secure_multi-party_computation">*</a>&nbsp;<br>software.<br></h1>
-        <h1 style="color: rgb(181,43,117); padding-left: 20px;padding-right: 20px;">We enable applications<br>that were previously impossible.</h1>
+        <h1 style="padding-left: 20px;padding-right: 20px;">Secure Computation<br>software<br></h1>
+        <h1 style="color: rgb(181,43,117); padding-left: 20px;padding-right: 20px;">enables applications<br>that were previously impossible.</h1>
     </section>
+    <div>
+        <div class="container">
+            <div class="row" style="font-size: 18px;">
+                <div class="col-md-4">
+                    <h4 style="color: rgb(181,43,117);">Privacy &amp; security by default</h4>
+                    <p>Process sensitive data with state-of-the-art privacy, security and compliance.<br></p>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: rgb(181,43,117);">Rapid deployment</h4>
+                    <p>Secure a sensitive business process in weeks.<br></p>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: rgb(181,43,117);">Crypto-as-a-service</h4>
+                    <p>Directly use advanced cryptographic functionalities via standard software.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div style="background-color: #eeefef;color: rgb(230,231,232);">
         <div class="container">
             <div class="row text-center">
@@ -55,16 +88,19 @@
             <div class="row" style="color: #313437;font-size: 18px;">
                 <div class="col-md-4">
                     <h3 style="color: rgb(181,43,117);">Privacy 2.0<br></h3>
-                    <p>Secure computation makes GDPR concepts elegantly simple, particularly "data minimization" and "privacy by design".&nbsp;<br></p>
+                    <p>Protect data at-rest and in-use by default.<br><br>Studies by the United Nations and European Commission say: <em>"MPC is a state-of the-art privacy preserving tool"</em>, because after the initial encryption step, data is always protected
+                        and&nbsp;<em>"considered to be non-personal data".</em><br><br><a class="btn btn-primary" role="button" href="privacy2_0.html"><strong>Learn more...</strong></a><br></p>
                 </div>
                 <div class="col-md-4">
-                    <h3 style="color: rgb(181,43,117);">How does it work<br></h3>
-                    <p>Privacy is ensured by separation of duties<a href="https://en.wikipedia.org/wiki/Separation_of_duties">*</a>: sensitive data is encrypted and split among multiple parties, or custodians. The custodians perform computations jointly.&nbsp;Nothing
-                        but the pre-agreed output is revealed, as long as the custodians do not collude.<br></p>
+                    <h3 style="color: rgb(181,43,117);">Privacy Engine<br></h3>
+                    <p>The Cranmera privacy engine processes data while encrypted.<br>&nbsp;&nbsp;<br>Encrypted data is sent to separate servers, which perform computations together.&nbsp;<br><br>Hence, the key requirement for security is <em>separation of duties</em>
+                        <a
+                            href="https://en.wikipedia.org/wiki/Separation_of_duties">*</a>,&nbsp;a time-tested control.<br><br><a class="btn btn-primary" role="button" href="engine.html"><strong>Learn more...</strong></a><br><br></p>
                 </div>
                 <div class="col-md-4">
                     <h3 style="color: rgb(181,43,117);">Academic roots<br></h3>
-                    <p>While the first foundational ideas date back to the 80s, the technology became practically relevant and commercially viable only recently.<br></p>
+                    <p>Theory of Secure Multi-Party Computation (MPC) became mainstream due to advances in networking, compute and protocol theory.<br><br>TUE and CWI, our <em>alma maters</em>, are known for their work in 'semi-honest' and 'active security'
+                        MPC protocols.<br><br><br><a class="btn btn-primary" role="button" href="https://en.wikipedia.org/wiki/Secure_multi-party_computation"><strong>Check Wikipedia...</strong></a><br><br></p>
                 </div>
             </div>
         </div>
@@ -86,12 +122,12 @@
                     <p>Develop a solution that: A. efficiently combines similar transactions across different banks and B. then detects money laundering on the combined transactions, with superior privacy and data protection.<br></p>
                 </div>
                 <div class="col-md-4">
-                    <h4 style="color: rgb(181,43,117);">Covid-19</h4>
-                    <p>Develop a privacy-by-design solution to analyse and manage traffic to office buildings. As part of a privacy-friendly "1.5m-society" solution, our software provides the secure computation layer of a broader building services app.<br></p>
+                    <h4 style="color: rgb(181,43,117);">Gender-equality</h4>
+                    <p>Assess&nbsp;and report on gender equality in workforces of participating organizations -with superior privacy -enabling our client to support government audits and voluntary readiness assessments with organizations.<br></p>
                 </div>
                 <div class="col-md-4">
-                    <h4 style="color: rgb(181,43,117);">Cyber Threat Intel Network</h4>
-                    <p>Enable a CERT to survey a&nbsp;network of organizations: “Have you seen this threat?”&nbsp;Organizations then anonymously upload their response. CERT shares the aggregated result back to the network.<br><br></p>
+                    <h4 style="color: rgb(181,43,117);">Cyber Threat Intel&nbsp;</h4>
+                    <p>Enable a CERT to survey a&nbsp;network of organizations: “Have you seen this threat?”&nbsp;Organizations then anonymously upload their response. CERT shares the aggregated result back to the network.<br></p>
                 </div>
             </div>
         </div>
@@ -140,39 +176,10 @@
         <div class="container">
             <div class="intro">
                 <h1 class="text-center" style="color: #313437;">About us</h1>
-                <h4 class="text-center" style="color: #313437;">We are a high-tech software company, determined to transform how organizations handle sensitive data.<br><br>Our focus is uncompromised privacy and rapid deployment. We believe robust privacy and business transformation go hand-in-hand.<br></h4>
-            </div>
-            <div class="intro">
-                <h1 class="text-center" style="color: #313437;"><br>Founders</h1>
-            </div>
-            <div class="row people" style="font-size: 16px;">
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="assets/img/niek.png">
-                        <h3 class="name" style="color: rgb(33,37,41);">Niek Bouman</h3>
-                        <p class="title">CTO</p>
-                        <p class="description" style="color: rgb(33,37,41);font-size: 16px;">Niek is a senior researcher specialized in privacy-preserving machine learning and secure&nbsp;multi-party computation.<br><br>Before, Niek held research positions at TU Eindhoven, ABN AMRO, EPFL (CH), and CWI.&nbsp;<br><br>Niek
-                            has a PhD (’12) from&nbsp;Leiden University in quantum cryptography and a MSc from University of Twente&nbsp;in Electrical Engineering.<br></p>
-                        <div class="social"><a href="https://www.linkedin.com/in/niek-j-bouman/"><i class="fa fa-linkedin-square"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="assets/img/toon2.png">
-                        <h3 class="name" style="color: rgb(33,37,41);">Toon Segers</h3>
-                        <p class="title">CPO</p>
-                        <p class="description" style="color: rgb(33,37,41);font-size: 16px;">Toon is a PhD candidate in&nbsp;applied cryptography at TU Eindhoven, focusing on MPC.<br><br>Prior, Toon was Partner at&nbsp;Deloitte, responsible for its Cyber Risk and Blockchain practices in The Netherlands.<br><br>Toon worked
-                            10 years at BCG, holds an MBA from Columbia and an MSc from TUE in Applied Math.<br></p>
-                        <div class="social"><a href="https://www.linkedin.com/in/toon-segers-814aa0/"><i class="fa fa-linkedin-square"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="assets/img/roderick_bw2.jpg" style="height: 160px;">
-                        <h3 class="name" style="color: rgb(33,37,41);">Roderick Rodenburg</h3>
-                        <p class="title">CEO</p>
-                        <p class="description" style="color: rgb(33,37,41);font-size: 16px;">Roderick is founder of Synple, an automated logistics capacity sharing platform.<br><br>Roderick has extensive&nbsp;experience in sensitive data exchange across companies.<br><br>Roderick worked 10 years at&nbsp;Unilever, has a
-                            MSc from TUE in Mechanical Engineering and an executive education from Harvard Business School.<br></p>
-                        <div class="social"><a href="https://www.linkedin.com/in/synpleroderick/"><i class="fa fa-linkedin-square"></i></a></div>
-                    </div>
-                </div>
+                <h4 class="text-center" style="color: #313437;">We are a high-tech software company, determined to transform how organizations handle sensitive data.<br><br>Our focus is uncompromised privacy and rapid deployment. We believe robust privacy and business transformation go hand-in-hand.<br><br>
+                    <a
+                        class="btn btn-primary" role="button" href="team.html"><strong>Meet our team...</strong></a>
+                </h4>
             </div>
         </div>
     </div>
@@ -180,17 +187,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center">Case studies of implementations</h1>
+                    <h1 class="text-center">Case studies of MPC&nbsp;implementations</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <h3 style="color: rgb(181,43,117);">MPC for blind auctions<br></h3>
-                    <p style="font-size: 18px;">First large-scale use of secure computation by Danisco and association of Danish beet growers.&nbsp;Reduction in EU subsidies drove immediate need to trade production rights. (<a href="https://eprint.iacr.org/2008/068">paper describing implementation</a>)<br><br></p>
+                    <p style="font-size: 18px;">First large-scale use of secure computation by Danisco and association of Danish beet growers.&nbsp;Reduction in EU subsidies drove immediate need to trade production rights.<br><br><a class="btn btn-primary" role="button" href="https://eprint.iacr.org/2008/068"><strong>Learn more...</strong></a></p>
                 </div>
                 <div class="col-md-6">
                     <h3 style="color: rgb(181,43,117);">MPC for population studies<br></h3>
-                    <p style="font-size: 18px;">Boston Women’s Workforce Council commissioned two studies of wage disparities within organizations in the Great Boston Area (2015-2016). (<a href="https://thebwwc.org/mpc">BWWC explains benefits of using MPC</a>)<br><br></p>
+                    <p style="font-size: 18px;">Boston Women’s Workforce Council commissioned two studies of wage disparities within organizations in the Great Boston Area (2015-2016).&nbsp;<br><br><a class="btn btn-primary" role="button" href="https://thebwwc.org/mpc"><strong>Learn more...</strong></a></p>
                 </div>
             </div>
         </div>
@@ -206,7 +213,7 @@
                     </div>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
-                        <p>Roseman Labs is headquartered in The Netherlands.<br><br>Our office address:<br>Delpratsingel 22,<br>4811 AP Breda</p>
+                        <p>Roseman Labs B.V. is headquartered in The Netherlands.<br><br>Our office address:<br>Delpratsingel 23,<br>4811 AP Breda</p>
                         <ul></ul>
                     </div>
                     <div class="col-md-6 item text">
