@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Roseman Labs - Privacy by design</title>
+    <meta name="twitter:description" content="When privacy matters most, we enable analytics and industry collaboration.">
+    <meta name="twitter:image" content="assets/img/roseman_labs_white_bg_fonts_OG.png">
+    <meta property="og:description" content="When privacy matters most, we enable analytics and industry collaboration.">
+    <meta property="og:image" content="assets/img/roseman_labs_white_bg_fonts_OG.png">
+    <meta name="description" content="When privacy matters most, we enable analytics and industry collaboration.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roseman Labs - Privacy by design">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roseman Labs - Privacy by design">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/roseman-01.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166624679-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166624679-1');
+</script>
+</head>
+
+<body>
+    <header class="hero hero-article">
+        <div class="container">
+            <div class="row crumb" id="back">
+                <div class="col"><a href="javascript:history.back()"><i class="material-icons back-button">arrow_back</i>&nbsp;</a></div>
+            </div>
+            <div class="row mb-5">
+                <div class="col article-img-wrapper"><img class="img-fluid img-article" src="assets/img/RL_eu_BW.png"></div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-sm-3 col-lg-2"><img class="img-fluid img-gray" src="assets/img/toon.png"></div>
+                <div class="col-9 col-sm-9 col-lg-10">
+                    <h3 class="mt-2">Toon Segers<br></h3>
+                    <h4>CPO at Roseman Labs<br></h4>
+                    <h6 class="my-4">Published on: 1 September 2020<br></h6>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="article" class="article">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="hero-h1 mt-4">Simplified GDPR compliance using MPC cryptography<br></h1>
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="mt-5">Summary<br></h3>
+                            <p>The European Commission and the United Nations sponsored three studies that explain that a technique called “Secure Multi-Party Computation” (MPC) is a “state of the art privacy-preserving tool”.<br></p>
+                            <p>MPC allows organizations to use data while it is encrypted. For example, several hospitals can collaborate in a clinical study without revealing patient records to each other, and only revealing the conclusion of the study. An NGO could analyze encrypted HR data to benchmark gender pay gaps without being able to see the salary data from participating organizations. An airport could run border control checks against a biometric database, without using the biometric data in the clear.<br></p>
+                            <p>One of the big insights in the UN and EC studies is that the data is considered “anonymous” after the initial encryption step (referred to as “secret-sharing” step, to be precise). Furthermore, processing personal data with MPC is not considered “data processing” under the GDPR. This is because MPC provides uniquely strong security and privacy features to data owners.<br></p>
+                            <p>In this blog, we highlight the key insights and provide links to the studies.<br></p>
+                            <blockquote class="blockquote my-5">
+                                <p class="mb-0">“MPC is a state-of the-art privacy preserving tool.”</p>
+                                <footer class="blockquote-footer">Horizon 2020 study 'Scalable Oblivious Data Analytics'</footer>
+                            </blockquote>
+                            <h3 class="mt-5">Background to Multi-Party Computation<br></h3>
+                            <p>MPC is a (cryptographic) technique that enables parties to perform computations on data, such that each party learns nothing beyond its own input and, optionally, the output of these computations. In other words, the data input by one party essentially remains hidden to the other parties.<br></p>
+                            <p>The way MPC works is as follows: The data is encrypted by means of randomly splitting the data into so-called “secret shares”, which have the property that single or multiple shares reveal absolutely no information about the data. These secret shares are distributed among multiple servers. Each server is controlled by a different trustee. The servers are setup to perform the necessary computation jointly.&nbsp;There can be two, three or multiple trustees, depending on the required trust model, but privacy is ensured as long as a subset of the trustees acts honestly (i.e., that those trustees do not collude).<br></p>
+                            <p>The beauty is that this technique can also be used by a single organization: After data collection, the data can be stored in secret-shared form, and several internal servers perform the secure computation. In this model, even inside a single organization, the data ‘at-rest’ and ‘in-use’ is fully protected against prying eyes.<br></p>
+                            <p>While the theoretical foundations of MPC have been in development since the 1980s, MPC has become valuable for real-world applications only since a few years, due to a combination of recent theoretical breakthroughs, and advances in computer hardware and networking technology. (See this&nbsp;<a href="https://en.wikipedia.org/wiki/Secure_multi-party_computation"><strong>Wiki</strong></a>&nbsp;for an excellent overview.)<br></p>
+                            <blockquote class="blockquote my-5">
+                                <p class="mb-0">“... the analytics carried out using MPC shall be considered as analysis carried out with feature data.” </p>
+                                <footer class="blockquote-footer"><em>H2020 'Scalable Oblivious Data Analytics'</em><br></footer>
+                            </blockquote>
+                            <h3 class="mt-5">Legal Opinion on Privacy properties of MPC<br></h3>
+                            <p>Three recent studies provide insight in the privacy properties of Secure Multi-Party Computation. In the next sections, we recap some of the most relevant paragraphs.<br></p>
+                            <p>If you study the reports in more detail, you will see that MPC gives substance to GDPR concepts such as:<br></p>
+                            <h4>“Data protection by design and by default” and “appropriate technical and organisational measures” (<a href="https://gdpr.eu/article-25-data-protection-by-design/" target="_blank">Art. 25</a>&nbsp;and <a href="https://gdpr.eu/article-24-responsibility-of-the-data-controller/" target="_blank">Art. 24</a>)<br></h4>
+                            <p>The sole requirement for confidentiality to hold throughout the business process is proper segregation of duties between the trustees (the administrators of the MPC servers). The fact that data remains encrypted during a business process is a significant paradigm shift versus today’s use of data. MPC also provides a significant level of protection: to steal or leak data, a malicious actor needs to compromise the admin keys of multiple trustees (this can be compared to protection by two-factor authentication).<br></p>
+                            <h4>“‘Processing’ means any operation .. performed on personal data” (<a href="https://gdpr.eu/article-4-definitions/" target="_blank">Art. 4.2</a>)<br></h4>
+                            <p>The output of the initial encryption step (the “secret-shares” used during the operation) are considered non-personal data. As we will see below, legal experts explain that operations done on the secret-shared data is not considered processing of personal data due to MPC’s unique data protection properties.<br></p>
+                            <h4>“Purpose limitation” (<a href="https://gdpr.eu/article-5-how-to-process-personal-data/" target="_blank">Art. 5.1.b)</a><br></h4>
+                            <p>Parties involved in the computation have explicit control over what is calculated. If trustees do not agree to a computation, it cannot be executed.<br></p>
+                            <h4>“Data minimization” (<a href="https://gdpr.eu/article-5-how-to-process-personal-data/" target="_blank">Art. 5.1.c</a>)<br></h4>
+                            <p>Selected parties receive the result of the calculation, and will not know more than this result.<br></p>
+                            <h4>“Rights of the data subject” (<a href="https://gdpr-info.eu/chapter-3/" target="_blank">Chpt. 3</a>)<br></h4>
+                            <p>As personal data is not exchanged, the data owner maintains control over the data, simplifying access (<a href="https://gdpr-info.eu/art-15-gdpr/">Art. 15</a>), accuracy/rectification (<a href="https://gdpr-info.eu/art-16-gdpr/">Art. 16</a>), erasure (<a href="https://gdpr-info.eu/art-17-gdpr/">Art. 17</a>), restriction of processing (<a href="https://gdpr-info.eu/art-18-gdpr/">Art. 18</a>), etc.<br></p>
+                            <h3 class="mt-5">Summary from UN Report on Privacy Techniques<br></h3>
+                            <p>UN’s recent Handbook for Privacy-Preserving Techniques summarizes the impact of MPC as follows:<br></p>
+                            <p>“One of the first significant precedents for secure multiparty computation was reached in Estonia with the Private Statistics project in 2015. In the project, 10 million identifiable tax records were linked with 600 000 identifiable education records and statistically analysed using secure multiparty computation.&nbsp;<strong>The Data Protection Agency, after studying the technical and organisational controls of the system, stated that no personal data was processed</strong>. The precedent has also been upheld with the MPC servers hosted in the public cloud.<br></p>
+                            <p>The PRACTICE project (European Commission Framework Programme 7) spent significant effort in analysing legal aspects of secure computing technologies.&nbsp;<strong>The report studies the Estonian precedent described above under the European General Data Protection (GDPR) regulation and finds that precedent can be upheld under the GDPR.</strong><br></p>
+                            <p><em>Further research has been performed by the SafeCloud project and SODA project.”</em><br></p>
+                            <h3 class="mt-5">SODA H2020 Study: Relevant Paragraphs<br></h3>
+                            <p>The report on 'Scalable Oblivious Data Analytics' states:<br></p>
+                            <p><strong>“The fact that the data fragmentation procedure [secret-sharing step] as such is processing of personal data does not mean that the output data has to fall under the scope of the GDPR. On the contrary, based on the arguments put forward here the data shards that have undergone the partitioning are considered to be non-personal data.”</strong><br></p>
+                            <p>It continues on page 52:<br></p>
+                            <p>“If personal data is turned into non-personal data, then the subsequent storage of the data pieces should not be considered ‘data processing’ within the frames of Art. 4 Nr. 2 and the data protection provisions in general.&nbsp;<strong>Following this logic, the analytics carried out using MPC shall be considered as analysis carried out with feature data.</strong>”<br></p>
+                            <p>And then:<br></p>
+                            <p>“<strong>As to the technical details, structure and design of the processing, MPC is a state-of the-art privacy preserving tool.</strong>&nbsp;The cryptographic solutions in use protect the data from intruders during the analysis. Intruders in this sense mean unauthorised external adversaries not intended to have access to the anonymised data.”<br></p>
+                            <p>A third, relevant study on privacy properties of MPC is by the EU Horizon 2020 PRACTICE consortium. We link to it below under 'Sources'.<br></p>
+                            <h3 class="mt-5">To conclude<br></h3>
+                            <p>MPC enables analysis of, and collaboration on, sensitive data. Please don’t hesitate to reach out with further questions or suggestions.&nbsp;Toon Segers (for more info:&nbsp;<a href="http://mailto:%20toon.segers@rosemanlabs.com/"><strong>toon.segers@rosemanlabs.com</strong></a>)<br></p>
+                            <h3 class="mt-5">Sources<br></h3>
+                            <ul>
+                                <li>EU Horizon2020 "Scalable Oblivious Data Analytics" (SODA),&nbsp;<a href="https://www.soda-project.eu/wp-content/uploads/2019/12/SODA-D3.5-Use-case-specific-legal-aspects.pdf">Deliverable D3.5</a>. See Section 3 on MPC.<br></li>
+                                <li>EU Horizon 2020 PRACTICE,&nbsp;<a href="https://practice-project.technikon.com/downloads/publications/year3/D31.3-Evaluation-and-integration-and-final-report-on-PU-M36.pdf">Deliverable D32.3</a>.<br></li>
+                                <li>UN&nbsp;<a href="http://publications.officialstatistics.org/handbooks/privacy-preserving-techniques-handbook/UN%20Handbook%20for%20Privacy-Preserving%20Techniques.pdf">Handbook on Privacy Preserving Computation Techniques</a>. See Page 47.<br></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="index.html#products">Decentralized Data Analytics Software</a></li>
+                            <li><a href="index.html#products">High Performance Pseudonimization Software</a></li>
+                            <li><a href="index.html#products">Serial Pseudonimization Software</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Knowledge</h3>
+                        <ul>
+                            <li><a href="index.html#media">Video explanation</a></li>
+                            <li><a href="index.html#projects">Threat Intel</a></li>
+                            <li><a href="index.html#projects">Anti-money laundering</a></li>
+                            <li><a href="index.html#projects">Gender equality</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item"></div>
+                    <div class="col-md-3 item text">
+                        <h3>Subscribe to our newsletter</h3>
+                        <form class="form-inline" data-bss-subject="Subscribe to newsletter">
+                            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
+                            <div class="form-group"><button class="btn btn-primary" type="submit">Subscribe </button></div>
+                        </form>
+                    </div>
+                </div>
+                <p class="copyright">Roseman Labs © 2020</p>
+            </div>
+        </footer>
+    </div>
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark navigation-clean" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="index.html#about">About</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="index.html#media">Media</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="index.html#products">Products</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="index.html#team">Team</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                        <div class="modal-body">
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col-lg-8 mx-auto">
+                                        <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                        <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="portfolio/cabin.png">
+                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/anime.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+</body>
+
+</html>
