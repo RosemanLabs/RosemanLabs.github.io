@@ -50,56 +50,42 @@
     <header class="hero hero-article">
         <div class="container">
             <div class="row crumb" id="back">
-                <div class="col mb-2"><a href="javascript:history.back()"><i class="material-icons back-button">arrow_back</i>&nbsp;</a></div>
-            </div>
-            <div class="row mb-5">
-                <div class="col article-img-wrapper"><img class="img-fluid img-article" src="assets/img/RL_chip_BW.png"></div>
-            </div>
-            <div class="row">
-                <div class="col-3 col-sm-3 col-lg-2"><img class="img-fluid img-gray" src="assets/img/toon.png"></div>
-                <div class="col-9 col-sm-9 col-lg-10 my-auto">
-                    <h3>Toon Segers<br></h3>
-                    <h4>CPO at Roseman Labs<br></h4>
-                    <h6 class="my-3">Published on: 1 April 2020<br></h6>
-                </div>
+                <div class="col"><a href="javascript:history.back()"><i class="material-icons back-button">arrow_back</i>&nbsp;</a></div>
             </div>
         </div>
     </header>
     <section id="article" class="article">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="hero-h1 mt-4">Ready for Privacy 2.0?<br></h1>
-                    <div class="row">
-                        <div class="col">
-                            <h4>From sensitive to anonymous<br></h4>
-                            <p>One of the ground-breaking insights in the&nbsp;UN and EC studies is that the data is considered “anonymous” after the initial&nbsp;encryption step, officially referred to as “secret-sharing” step.<br></p>
-                            <h4>No processing of personal data<br></h4>
-                            <p>Processing personal data with MPC is not considered “data processing” under the&nbsp;GDPR. This is because MPC provides uniquely strong security and privacy&nbsp;features to data owners.<br></p>
-                            <h3 class="mt-5">GDPR concepts become elegantly simple<br></h3>
-                            <h4>Protection by default (<a href="https://gdpr.eu/article-25-data-protection-by-design/">Art 25.</a>)<br></h4>
-                            <p>The fact that data remains encrypted during a business process is&nbsp;a significant paradigm shift versus today’s use of data.<br></p>
-                            <p>MPC also provides a&nbsp;significant level of protection: to steal or leak data, a malicious actor needs&nbsp;to compromise the admin keys of multiple trustees (this can be compared to&nbsp;protection by two-factor authentication or segregation of duties).<br></p>
-                            <h4>No processing of PII (<a href="https://gdpr.eu/article-4-definitions/">Art 4.</a>)<br></h4>
-                            <p>The output of the initial encryption step (the “secret-shares” used during the&nbsp;operation) are considered non-personal data.<br></p>
-                            <p>As we will see below, legal&nbsp;experts explain that operations done on the secret-shared data is not&nbsp;considered processing of personal data due to MPC’s unique data protection properties.<br></p>
-                            <h4>Rights of the data subject (<a href="https://gdpr-info.eu/chapter-3/">Art 12-23.</a>)<br></h4>
-                            <p>As&nbsp;personal data is not centralized or exchanged, the controller maintains control over the data,&nbsp;simplifying access (<a href="https://gdpr-info.eu/art-15-gdpr/">Art. 15</a>), accuracy/ rectification&nbsp;(<a href="https://gdpr-info.eu/art-16-gdpr/">Art. 16</a>), erasure (<a href="https://gdpr-info.eu/art-17-gdpr/">Art. 17</a>), restriction of&nbsp;processing (<a href="https://gdpr-info.eu/art-18-gdpr/">Art. 18</a>), etc.<br></p>
-                            <h3 class="mt-5">Quotes from the studies<br></h3>
-                            <h4>UN Handbook on Privacy Preserving Computation Techniques<br></h4>
-                            <p>“<strong>One of the first significant precedents&nbsp;for secure multiparty computation was reached in Estonia with the Private&nbsp;Statistics project in 2015.</strong>&nbsp;In the project, 10 million identifiable tax&nbsp;records were linked with 600 000 identifiable education records and&nbsp;statistically analysed using secure multiparty computation.&nbsp;<strong>The Data&nbsp;Protection Agency, after studying the technical and organisational controls of&nbsp;the system, stated that no personal data was processed</strong>. The precedent has&nbsp;also been upheld with the MPC servers hosted in the public cloud.&nbsp;<br></p>
-                            <p>The PRACTICE project (European Commission&nbsp;Framework Programme 7) spent significant effort in analysing legal aspects of&nbsp;secure computing technologies.&nbsp;<strong>The report studies the Estonian precedent&nbsp;described above under the European General Data Protection (GDPR) regulation&nbsp;and finds that precedent can be upheld under the GDPR.</strong><br></p>
-                            <p>Further research has been performed by the&nbsp;SafeCloud project and SODA project.”<br></p>
-                            <p>See UN&nbsp;<a href="http://publications.officialstatistics.org/handbooks/privacy-preserving-techniques-handbook/UN%20Handbook%20for%20Privacy-Preserving%20Techniques.pdf">Handbook on Privacy Preserving Computation Techniques</a>, page&nbsp;47.<br>Also see&nbsp;EU Horizon 2020 PRACTICE,&nbsp;<a href="https://practice-project.technikon.com/downloads/publications/year3/D31.3-Evaluation-and-integration-and-final-report-on-PU-M36.pdf">Deliverable</a>&nbsp;<a href="https://practice-project.technikon.com/downloads/publications/year3/D31.3-Evaluation-and-integration-and-final-report-on-PU-M36.pdf">D32.3</a>, Section 3.2.<br></p>
-                            <p><br></p>
-                            <h4>EU Horizon 2020 study Scalable Oblivious Data Analytics<br></h4>
-                            <p><strong>“The fact&nbsp;that the data fragmentation procedure [secret-sharing step] as such is&nbsp;processing of personal data does not mean that the output data has to fall&nbsp;under the scope of the GDPR. On the contrary, based on the arguments put&nbsp;forward here the data shards that have undergone the partitioning are&nbsp;considered to be non-personal data.”</strong><br></p>
-                            <p>“If personal&nbsp;data is turned into non-personal data, then the subsequent storage of the data&nbsp;pieces should not be considered ‘data processing’ within the frames of Art. 4&nbsp;Nr. 2 and the data protection provisions in general.&nbsp;<strong>Following this logic,&nbsp;the analytics carried out using MPC shall be considered as analysis carried out&nbsp;with feature data.</strong>”<br></p>
-                            <p>“<strong>As to the&nbsp;technical details, structure and design of the processing, MPC is a state-of&nbsp;the-art privacy preserving tool.</strong>&nbsp;The cryptographic solutions in use protect&nbsp;the data from intruders during the analysis. Intruders in this sense mean&nbsp;unauthorised external adversaries not intended to have access to the anonymised&nbsp;data.”<br></p>
-                            <p>See EU Horizon2020 SODA,&nbsp;<a href="https://www.soda-project.eu/wp-content/uploads/2019/12/SODA-D3.5-Use-case-specific-legal-aspects.pdf">Deliverable</a>&nbsp;<a href="https://www.soda-project.eu/wp-content/uploads/2019/12/SODA-D3.5-Use-case-specific-legal-aspects.pdf">D3.5</a>,&nbsp;Section 3.<br></p>
+            <div class="row" id="sugar-beet">
+                <section id="media" class="media">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-5">
+                                <h1>BLOG</h1>
+                                <h2 class="mb-4">OUR LATEST POSTS</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-4"><img class="img-fluid img-gray" src="assets/img/builder__resized.png">
+                                <h3 class="my-3">From our CTO: C++ Build Systems</h3>
+                                <h3 class="my-3"></h3>
+                                <p>Recently, we migrated from CMake to Meson. In this blogpost our CTO&nbsp;tells the story of how we got to this decision and what we got out of<br>it.<br></p>
+                                <p><a href="blog/build-system.html"><span style="text-decoration: underline;">Read the article</span></a><br></p>
+                            </div>
+                            <div class="col-12 col-lg-4"><img class="img-fluid img-gray" src="assets/img/hush-naidoo-yo01Z-9HQAw-unsplash.jpg">
+                                <h3 class="my-3">Analytics for Health Consortia<br></h3>
+                                <p></p>
+                                <p>Data collaboration in healthcare is extremely valuable, to increase effectiveness of treatments and to&nbsp;provide the right care in the right place. However,&nbsp;health care information is very sensitive, and not easy to access. <br><br>Our solution enables organizations to perform analyses on joint data with strong privacy. <br></p>
+                                <p><a href="blog/health_consortia1.html"><span style="text-decoration: underline;">Read the article</span></a><br></p>
+                            </div>
+                            <div class="col-12 col-lg-4"><img class="img-fluid img-gray" src="assets/img/computable.png">
+                                <h3 class="my-3">Computable Article<br></h3>
+                                <p>The Dutch IT magazine 'Computable' interviewed our CEO and featured us as&nbsp;"one of the most promising privacy tech startups" in The Netherlands.<br><br>It is a very readable story about our launch, and our first customers.<br></p>
+                                <p><a href="https://www.computable.nl/artikel/achtergrond/security/7139101/1444691/gevoelige-data-veilig-analyseren.html"><span style="text-decoration: underline;">Read the article (in dutch)</span></a><br></p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </section>

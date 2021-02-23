@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Roseman Labs - Privacy by design</title>
+    <meta name="twitter:description" content="When privacy matters most, we enable analytics and industry collaboration.">
+    <meta name="twitter:image" content="../assets/img/roseman_labs_white_bg_fonts_OG.png">
+    <meta property="og:description" content="When privacy matters most, we enable analytics and industry collaboration.">
+    <meta property="og:image" content="../assets/img/roseman_labs_white_bg_fonts_OG.png">
+    <meta name="description" content="When privacy matters most, we enable analytics and industry collaboration.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roseman Labs - Privacy by design">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roseman Labs - Privacy by design">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/roseman-01.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/img/roseman-01.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="../assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="../assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Newsletter-Subscription-Form.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166624679-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166624679-1');
+</script>
+</head>
+
+<body>
+    <header class="hero hero-article">
+        <div class="container">
+            <div class="row crumb" id="back">
+                <div class="col mb-2"><a href="javascript:history.back()"><i class="material-icons back-button">arrow_back</i>&nbsp;</a></div>
+            </div>
+            <div class="row mb-5">
+                <div class="col article-img-wrapper"><img class="img-fluid img-article" src="../assets/img/builder.png"></div>
+            </div>
+            <div class="row">
+                <div class="col-9 col-sm-9 col-lg-10 my-auto">
+                    <h3>Niek Bouman<br></h3>
+                    <h4>CTO at Roseman Labs<br></h4>
+                    <h6 class="my-3">Published on: 23 February 2021<br></h6>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="article" class="article">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="hero-h1 mt-4">C++ build systems: OUR TRANSITION FROM CMAKE TO MESON<br></h1>
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="mt-5">How we got to this decision and what we got out of it.<br></h3>
+                            <p>We develop our main product, the Cranmera MPC engine, in C++20. (Why we chose Modern C++ and not, for example, Rust, is a topic for another blogpost.)&nbsp;Because&nbsp;C++ doesn’t come with a default build system like Rust’s Cargo, it&nbsp;means that it is up to the programmer to choose an appropriate build&nbsp;system.&nbsp;(Strictly speaking, I should say ‘build system generator’, as&nbsp;Ninja is the actual build system that we use, but let’s not get into that today.)<br><br>This choice is of course not just a disadvantage; in that you actually have a choice. As CMake is quite popular in the C++ community these days, I had been using CMake for several years now. (And before that I used GNU’s Automake.) Anyway, in the beginning, I was satisfied with my choice for CMake, although I never had the feeling that I really mastered CMake.<br><br></p>
+                            <h4>"I want to have that ultimate control also over my build system"<br></h4>
+                            <p>In my previous role as academic researcher, I mainly wrote scientific code for which the build system played a minor role. I&nbsp;liked to view the build system as a part that you ‘mess around with it&nbsp;until it works, and then keep your hands off it’, which served my&nbsp;purpose well enough at the time. Now that I have the role of CTO in a&nbsp;privacy-technology company, I bear much more responsibility for the&nbsp;quality and robustness of the developed codebase.<br><br>Even before you have to choose a build system, there is the choice of&nbsp;the programming language for a new project. In a nutshell: choose the right tool given the problem. For us, that choice happens to be C++, which gives us ultimate control. (There is a price to pay for this level of control, namely that you become responsible for managing all resources within the program, and for protecting yourself against the footguns that any language with low-level features happily offers you. <br><br>The purpose of having all that control is that it should ultimately pay off in terms of better performance: smaller memory footprint, faster code, etc., though it comes with the price of extra cognitive load during development.)<br>I want to have that ultimate control also over my build system, but as I already indicated above, with CMake it never felt like having that level of control.<br><br></p>
+                            <h4>Coming from CMake<br></h4>
+                            <p>Recently,&nbsp;we have migrated from CMake to Meson, and in the rest of this blogpost I&nbsp;want to tell the story of how we got to this decision and what we got out of it. <br><br>The&nbsp;main reason for migrating our build system, is that I wanted to prevent&nbsp;the scenario where some parts of the codebase, of which you actually know that those are a bit messy (in this case, our CMake scripts), suddenly start playing up at a very bad moment, for example just before&nbsp;the deadline of shipping a new product. <br><br>If&nbsp;you have some engineering experience, you will agree that the more subtle kind of technical problems like to manifest themselves in&nbsp;atypical situations or corner cases. What I mean, in terms of a build system, is that you won’t notice the actual quality of your build system&nbsp;scripts until you start doing special things, like porting to other&nbsp;OSes, architectures and cross-compiling. At that point you will be penalized for every ‘hack’, where you did not follow the idiom prescribed by the makers of the (build) system. And where are those&nbsp;hacks actually located? In your own build scripts, or in the “FindXXX.cmake” scripts you found somewhere on GitHub? <br><br></p>
+                            <h4>Modern CMake<br></h4>
+                            <p>Then there is the topic of “Modern CMake”, caused by the paradigm shift that&nbsp;took place a few years ago in CMake, due to which we now have the “old”&nbsp;(read: “wrong”) directory-based style, versus the “modern” (and recommended) target-based style. “Modern CMake” is probably coined to make us think of “Modern C++”, the latter being the novel style of C++ that encourages the use of updated and less error-prone language and standard-library constructs.&nbsp;<br>With respect to the language C++, I value the backwards compatibility guarantees that C++ offers, and I agree that those backwards-compatibility benefits make up for the ugly parts of its syntax. With respect to a build system, however, I am not convinced of the value of such backwards compatibility, and in my opinion, a clean syntax and well-thought-out structure is much to be preferred.&nbsp;<br><br>By the way, googling for “modern CMake” yields quite many blog posts in which authors explain the intricacies of Modern CMake. One could view the abundance of such stories as a positive thing, though I can’t help regarding it as an indicator for the poor style of CMake’s own documentation. Compared to that, Meson’s documentation, together with its design, simply feels ‘right’.&nbsp;<br><br>Before deciding to switch our build system, I have tried to convert our CMake scripts to the “Modern CMake” idiom and polish them up. After putting some work in it, meaning reading CMake docs and changing scripts, I was still not satisfied with the result. Probably it was my own fault; I still did not yet fully understand CMake’s new idioms, and as a consequence our build system setup still felt brittle. On the other hand, given that our build system requirements are not that complex, why&nbsp;should I invest more time to become an expert in a system (CMake) that I anyway appreciate less the more I read about it... What about&nbsp;alternatives?&nbsp;<br><br></p>
+                            <h4>Choosing Meson<br></h4>
+                            <p>Before choosing Meson, I also considered build2 by Boris Kolpackov / Code Synthesis. Build2 is famous for being one of the earliest build systems&nbsp;to support C++20 Modules, and based on its descriptions and the author’s&nbsp;talks (e.g. at CPPCon) this system seems to be well-designed, more&nbsp;advanced than most other build systems, and to have a lot of potential. However, given my limited amount of time, I was unable to quickly figure&nbsp;out from its documentation how I could accomplish common tasks, like linking with libs that are not included in the related cppget.org repository, such as Boost. I think improving documentation-for-the-impatient is something where Build2 could improve.&nbsp;BTW, I am curious to see how Meson’s approach to dealing with C++20&nbsp;modules will develop; we do not yet use them in our project.&nbsp;<br><br>I do not want claim that our build system requirements are very complex, though we do need some special setup:&nbsp;<br>- we need multi-compiler support (Clang for debug and GCC for release builds);<br>- depending on the use of Address Sanitizer, or Valgrind, we need&nbsp;differently compiled versions of some Boost libs (Boost.Context and Boost.Fiber); and<br>- we use a some generated code, which originates from Cap’n Proto, a protobuf-like library for object serialization.<br><br>With&nbsp;Meson, all these were easy to accomplish (for the third I use a little helper Python script), and, maybe even more importantly, in such a way that I fully understand what is going on under the hood.<br><br>Furthermore, some personal favourites about Meson are:<br>-&nbsp;the concept of a dependency, which lets you bundle libraries with include paths, and the different ways to obtain such dependency (automatic vs. manually)<br>- one does not have to specify header files in the executable target to make IDEs happy<br>- integration with pkg-config and CMake, to locate system-installed libs<br>- easy-to-manage configuration options&nbsp;<br>- out-of-the-box support common stuff (sanitizer support, coverage builds, stripping binaries, etc.)<br>- easy-to-extend while maintaining transparency<br>- parallel unit tests<br><br></p>
+                            <h4>To conclude<br></h4>
+                            <p>A&nbsp;key benefit of a good and transparent build system is that it will save you time, and that it makes it much easier to use helper tools that&nbsp;will improve code quality, like Clang’s static analyzer, Address Sanitizer, coverage builds, etcetera. We are very happy with Meson,&nbsp;thanks Jussi Pakkanen!<br><br></p>
+                            <p><br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="../index.html#products">Decentralized Data Analytics Software</a></li>
+                            <li><a href="../index.html#products">High Performance Pseudonimization Software</a></li>
+                            <li><a href="../index.html#products">Serial Pseudonimization Software</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Knowledge</h3>
+                        <ul>
+                            <li><a href="../index.html#media">Video explanation</a></li>
+                            <li><a href="../index.html#projects">Threat Intel</a></li>
+                            <li><a href="../index.html#projects">Anti-money laundering</a></li>
+                            <li><a href="../index.html#projects">Gender equality</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item"></div>
+                    <div class="col-md-3 item text">
+                        <h3>Subscribe to our newsletter</h3>
+                        <form class="form-inline" data-bss-subject="Subscribe to newsletter">
+                            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Your Email"></div>
+                            <div class="form-group"><button class="btn btn-primary" type="submit">Subscribe </button></div>
+                        </form>
+                    </div>
+                </div>
+                <p class="copyright">Roseman Labs © 2020</p>
+            </div>
+        </footer>
+    </div>
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark navigation-clean" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="../index.html#about">About</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="../index.html#projects">Projects</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="../index.html#media">Media</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="../blog.html">Blog</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="../index.html#products">Products</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="../index.html#team">Team</a></li>
+                    <li class="nav-item mx-2 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3" href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-1">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                        <div class="modal-body">
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col-lg-8 mx-auto">
+                                        <h2 class="text-uppercase text-secondary mb-0">Project Name</h2>
+                                        <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="portfolio/cabin.png">
+                                        <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Close Project</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/smart-forms.min.js"></script>
+    <script src="../assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="../assets/js/anime.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+</body>
+
+</html>

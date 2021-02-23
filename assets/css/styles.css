@@ -123,3 +123,22 @@ img {
   background: url("../../assets/img/background_plane_01.png") left / cover no-repeat fixed;
 }
 
+#medium-widget {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.medium-widget-article__row {
+  margin: 0px;
+}
+
+.medium-widget-article__title a {
+  font-size: 1.5rem;
+  color: #D62671;
+}
+
