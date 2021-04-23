@@ -1,1 +1,1 @@
-{"short_name":"Roseman","name":"Roseman Labs - Privacy by design","icons":[{"src":"/assets/img/roseman-01.png","type":"image/png","sizes":"512x512"},{"src":"/assets/img/roseman-01.png","type":"image/png","sizes":"512x512"}],"start_url":"www.rosemanlabs.com","display":"fullscreen"}
+{"short_name":"Roseman","name":"Roseman Labs - Privacy by design","icons":[{"src":"/assets/img/roseman-01.png","type":"image/png","sizes":"512x512"},{"src":"/assets/img/roseman-01.png","type":"image/png","sizes":"512x512"}],"start_url":false,"display":"fullscreen"}
